@@ -1,21 +1,23 @@
 import Star from 'media/star.png'
-import Katie from 'media/katie-zaferes.png'
 
 function Card() {
     return (
-        <div className='Card'>
-            <img src={Katie} className='Card--image'></img>
-            <div className='Card--content'>
-                <div>
-                    <img src={Star}></img>
+        <section className='card'>
+            <div className='card--image'>
+                <p className='card--image--label'>SOLD OUT</p>
+            </div>
+            <div className='card--content'>
+                <div className='card--content--review'>
+                    <img src={Star} className='card--content--review--star'></img>
                     <p>5.0</p>
-                    <p>(6)</p>
-                    <p>USA</p>
+                    <p className='card--content--review--greytext'>(6)</p>
+                    <p className='card--content--review--greytext'>{'\u2022'}</p>
+                    <p className='card--content--review--greytext'>USA</p>
                 </div>
                 <p>Life lessons with Katie Zaferes</p>
                 <p><b>From $136</b> / person</p>
             </div>
-        </div>
+        </section>
     )
 }
 
