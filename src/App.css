@@ -91,7 +91,7 @@ section {
 .card--image {
   width: 176px;
   height: 235px;
-  background: url(media/katie-zaferes.png);
+  /* background: url(media/katie-zaferes.png); */
   background-size: cover;
   background-position: center;
   border-radius: 9px;

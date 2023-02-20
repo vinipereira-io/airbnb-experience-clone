@@ -1,21 +1,22 @@
 import Star from 'media/star.png'
+const path = 'media/'
 
-function Card() {
+function Card(props) {
     return (
         <section className='card'>
-            <div className='card--image'>
+            <div className='card--image' style={`background: url(media/${props.image})`}>
                 <p className='card--image--label'>SOLD OUT</p>
             </div>
             <div className='card--content'>
                 <div className='card--content--review'>
                     <img src={Star} className='card--content--review--star'></img>
-                    <p>5.0</p>
-                    <p className='card--content--review--greytext'>(6)</p>
+                    <p>{props.rating}</p>
+                    <p className='card--content--review--greytext'>{'(' + props.reviewCount + ')'}</p>
                     <p className='card--content--review--greytext'>{'\u2022'}</p>
-                    <p className='card--content--review--greytext'>USA</p>
+                    <p className='card--content--review--greytext'>{props.country}</p>
                 </div>
-                <p>Life lessons with Katie Zaferes</p>
-                <p><b>From $136</b> / person</p>
+                <p>{props.title}</p>
+                <p><b>From ${props.price}</b> / person</p>
             </div>
         </section>
     )
