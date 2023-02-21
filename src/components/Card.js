@@ -3,7 +3,7 @@ import Star from 'media/star.png'
 function Card(props) {
     return (
         <section className='card'>
-            <div className='card--image' style={{background: `url(../media/${props.image})`}}>
+            <div className='card--image' style={{backgroundImage: `url(${'../media/' + props.image})`}}>
                 <p className='card--image--label'>SOLD OUT</p>
             </div>
             <div className='card--content'>
