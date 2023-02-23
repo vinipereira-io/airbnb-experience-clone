@@ -91,8 +91,6 @@ section {
 .card--image {
   width: 176px;
   height: 235px;
-  background-size: cover;
-  background-position: center;
   border-radius: 9px;
 }
 

@@ -2,6 +2,7 @@ import './App.css';
 import Navbar from 'components/Navbar';
 import Hero from 'components/Hero';
 import Card from 'components/Card';
+import Data from './data.js';
 
 function App() {
   return (
@@ -9,14 +10,17 @@ function App() {
       <Navbar />
       <div className='app--content'>
         <Hero />
-        <Card 
-          image='katie-zaferes.png'
-          rating={5.0}
-          reviewCount={6}
-          country='USA'
-          title='Life Lessons with Katie Zaferes'
-          price={136}
-        />
+        {Data.map(card => (
+          <Card 
+          image={card.coverImg}
+          rating={card.stats.rating}
+          reviewCount={card.stats.reviewCount}
+          location={card.location}
+          title={card.title}
+          price={card.price}
+          />
+        )
+          )}
       </div>
     </div>
   );
