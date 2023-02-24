@@ -12,8 +12,8 @@ function Card(props) {
                     <p className='card--content--review--greytext'>{'\u2022'}</p>
                     <p className='card--content--review--greytext'>{props.location}</p>
                 </div>
-                <p>{props.title}</p>
-                <p><b>From ${props.price}</b> / person</p>
+                <p className='card--title'>{props.title}</p>
+                <p className='card--price'><b>From ${props.price}</b> / person</p>
             </div>
         </section>
     )
