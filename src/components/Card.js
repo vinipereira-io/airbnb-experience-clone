@@ -1,8 +1,16 @@
 import Star from 'media/star.png'
 
 function Card(props) {
+    let badgeText
+    if (props.openSpots === 0) {
+        badgeText = 'SOLD OUT';
+    } else if (props.location === 'Online') {
+        badgeText = 'ONLINE';
+    }
+
     return (
-        <section className='card'>
+        <div className='card'>
+            {badgeText && <div className='card--badge'>{badgeText}</div>}
             <img src={props.image} className='card--image'></img>
             <div className='card--content'>
                 <div className='card--content--review'>
@@ -15,7 +23,7 @@ function Card(props) {
                 <p className='card--title'>{props.title}</p>
                 <p className='card--price'><b>From ${props.price}</b> / person</p>
             </div>
-        </section>
+        </div>
     )
 }
 
