@@ -13,6 +13,7 @@ function App() {
         <section className="cards-list">
           {Data.map(card => (
             <Card 
+            key={card.id}
             image={card.coverImg}
             rating={card.stats.rating}
             reviewCount={card.stats.reviewCount}
