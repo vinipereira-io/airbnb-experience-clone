@@ -11,16 +11,17 @@ function App() {
       <div className='app--content'>
         <Hero />
         <section className="cards-list">
-          {Data.map(card => (
+          {Data.map(item => (
             <Card 
-            key={card.id}
-            image={card.coverImg}
+            key={item.id}
+            item={item}
+            /* image={card.coverImg}
             rating={card.stats.rating}
             reviewCount={card.stats.reviewCount}
             location={card.location}
             title={card.title}
             price={card.price}
-            openSpots={card.openSpots}
+            openSpots={card.openSpots} */
             />
           )
             )}
