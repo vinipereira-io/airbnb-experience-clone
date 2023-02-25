@@ -149,3 +149,7 @@ section {
   font-weight: 400;
   font-size: 10px;
 }
+
+.cards-list::-webkit-scrollbar {
+  display: none;
+}

@@ -15,13 +15,6 @@ function App() {
             <Card 
             key={item.id}
             item={item}
-            /* image={card.coverImg}
-            rating={card.stats.rating}
-            reviewCount={card.stats.reviewCount}
-            location={card.location}
-            title={card.title}
-            price={card.price}
-            openSpots={card.openSpots} */
             />
           )
             )}
